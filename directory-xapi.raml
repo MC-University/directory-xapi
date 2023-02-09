@@ -11,6 +11,9 @@ uses:
   domain-fragment: /exchange_modules/4d19cb17-975a-49d0-9cf7-d514ca2710f0/domain-fragment/1.0.0/domain-fragment.raml
 
 /students:
+  is:
+    - commons-fragment.hasCommonHeaders
+    - commons-fragment.hasRateLimiting
   type:
     commons-fragment.createReadCollection: {
       getResponseType: domain-fragment.studentGetResponseDataType,
@@ -19,22 +22,27 @@ uses:
     }
   get:
     is:
-      - commons-fragment.hasCommonHeaders
       - commons-fragment.hasCacheable
-      - commons-fragment.hasRateLimiting
     queryParameters:
       lastName?:
         description: Filter by last name
-        example: Stark
+        example: Spark
         type: string
       firstName?:
         description: Filter by last name
-        example: Stark
+        example: Tony
         type: string
-      su?:
+      subjects?:
         description: Filter by last name
-        example: Stark
-        type: string
+        example: [Physics, Political Science]
+        type: array
+        items:
+          type: string
+  post:
+    body:
+      application/json:
+        type: domain-fragment.studentCreateRequestDataType
+        example: !include /exchange_modules/4d19cb17-975a-49d0-9cf7-d514ca2710f0/domain-fragment/1.0.0/examples/studentCreateRequestExample.json
   /{studentId}:
     type:
       commons-fragment.readUpdateDeleteItem: {
