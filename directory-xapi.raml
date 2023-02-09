@@ -12,15 +12,21 @@ uses:
 
 /students:
   get:
-    type:
-      commons-fragment.readCollection: {
-        getResponseType: domain-fragment.studentsListDataType,
-        getResponseExample: /exchange_modules/4d19cb17-975a-49d0-9cf7-d514ca2710f0/domain-fragment/1.0.0/examples/studentListGetResponseExample.json
-      }
+  type:
+    commons-fragment.readCollection: {
+      getResponseType: domain-fragment.studentsListDataType,
+      getResponseExample: /exchange_modules/4d19cb17-975a-49d0-9cf7-d514ca2710f0/domain-fragment/1.0.0/examples/studentListGetResponseExample.json
+    }
     is:
       - commons-fragment.hasCommonHeaders
       - commons-fragment.hasCacheable
       - commons-fragment.hasRateLimiting
+  post:
+  type:
+    commons-fragment.readCollection: {
+      getResponseType: domain-fragment.studentsListDataType,
+      getResponseExample: /exchange_modules/4d19cb17-975a-49d0-9cf7-d514ca2710f0/domain-fragment/1.0.0/examples/studentListGetResponseExample.json
+    }
   /{studentId}:
     type:
       commons-fragment.readMember: {
