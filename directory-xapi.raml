@@ -20,7 +20,7 @@ uses:
       getResponseExample: !include /exchange_modules/4d19cb17-975a-49d0-9cf7-d514ca2710f0/domain-fragment/1.0.0/examples/studentListGetResponseExample.json,
       postResponseExample: !include /exchange_modules/4d19cb17-975a-49d0-9cf7-d514ca2710f0/domain-fragment/1.0.0/examples/studentCreateResponseExample.json,
       errorResponseType: null,
-      errorResponseExample: null
+      errorResponseExample: "null"
     }
   get:
     is:
@@ -56,7 +56,9 @@ uses:
         getResponseType: domain-fragment.studentGetResponseDataType,
         getResponseExample: !include /exchange_modules/4d19cb17-975a-49d0-9cf7-d514ca2710f0/domain-fragment/1.0.0/examples/studentGetResponseExample.json,
         putResponseExample: !include /exchange_modules/4d19cb17-975a-49d0-9cf7-d514ca2710f0/domain-fragment/1.0.0/examples/studentUpdateResponseExample.json,
-        deleteResponseExample: !include /exchange_modules/4d19cb17-975a-49d0-9cf7-d514ca2710f0/domain-fragment/1.0.0/examples/studentDeleteResponseExample.json
+        deleteResponseExample: !include /exchange_modules/4d19cb17-975a-49d0-9cf7-d514ca2710f0/domain-fragment/1.0.0/examples/studentDeleteResponseExample.json,
+        errorResponseType: null,
+        errorResponseExample: "null"
     }
     get:
       #insert additional specs as needed
