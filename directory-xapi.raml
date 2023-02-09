@@ -14,7 +14,8 @@ uses:
   type:
     commons-fragment.createReadCollection: {
       getResponseType: domain-fragment.studentGetResponseDataType,
-      getResponseExample: !include /
+      getResponseExample: !include /exchange_modules/4d19cb17-975a-49d0-9cf7-d514ca2710f0/domain-fragment/1.0.0/examples/studentListGetResponseExample.json,
+      postResponseExample: !include /exchange_modules/4d19cb17-975a-49d0-9cf7-d514ca2710f0/domain-fragment/1.0.0/examples/studentCreateResponseExample.json
     }
   get:
     is:
@@ -23,9 +24,11 @@ uses:
       - commons-fragment.hasRateLimiting
   /{studentId}:
     type:
-      commons-fragment.readMember: {
-        getResponseType: domain-fragment.studentDataType,
-        getResponseExample: /exchange_modules/4d19cb17-975a-49d0-9cf7-d514ca2710f0/domain-fragment/1.0.0/examples/studentGetResponseExample.json
+      commons-fragment.readUpdateDeleteItem: {
+        getResponseType: domain-fragment.studentGetResponseDataType,
+        getResponseExample: !include /exchange_modules/4d19cb17-975a-49d0-9cf7-d514ca2710f0/domain-fragment/1.0.0/examples/studentGetResponseExample.json,
+        patchResponseExample: !include /exchange_modules/4d19cb17-975a-49d0-9cf7-d514ca2710f0/domain-fragment/1.0.0/examples/studentUpdateResponseExample.json,
+        deleteResponseExample: !include /exchange_modules/4d19cb17-975a-49d0-9cf7-d514ca2710f0/domain-fragment/1.0.0/examples/studentDeleteResponseExample.json
     }
     get:
       is:
