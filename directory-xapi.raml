@@ -23,7 +23,11 @@ uses:
       - commons-fragment.hasCacheable
       - commons-fragment.hasRateLimiting
     queryParameters:
-      
+      lastName:
+        description: Filter by last name
+        example: Stark
+        required:
+        type:
   /{studentId}:
     type:
       commons-fragment.readUpdateDeleteItem: {
