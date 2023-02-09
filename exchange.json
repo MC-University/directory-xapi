@@ -1,1 +1,1 @@
-{"main":"directory-xapi.raml","name":"directory-xapi","classifier":"raml","tags":[],"dependencies":[{"groupId":"4d19cb17-975a-49d0-9cf7-d514ca2710f0","assetId":"domain-fragment","version":"1.0.0"},{"groupId":"4d19cb17-975a-49d0-9cf7-d514ca2710f0","assetId":"securities-fragment","version":"1.0.1"}]}
+{"main":"directory-xapi.raml","name":"directory-xapi","classifier":"raml","tags":[],"dependencies":[{"groupId":"4d19cb17-975a-49d0-9cf7-d514ca2710f0","assetId":"domain-fragment","version":"1.0.0"}]}
