@@ -23,10 +23,17 @@ uses:
       - commons-fragment.hasCacheable
       - commons-fragment.hasRateLimiting
     queryParameters:
-      lastName:
+      lastName?:
         description: Filter by last name
         example: Stark
-        required: true
+        type: string
+      firstName?:
+        description: Filter by last name
+        example: Stark
+        type: string
+      su?:
+        description: Filter by last name
+        example: Stark
         type: string
   /{studentId}:
     type:
