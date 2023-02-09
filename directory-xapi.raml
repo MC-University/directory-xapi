@@ -12,8 +12,9 @@ uses:
 
 /students:
   type:
-    commons-fragment.createReadCollection{
-      getResponseType: domain-fragment.
+    commons-fragment.createReadCollection: {
+      getResponseType: domain-fragment.studentGetResponseDataType,
+      getResponseExample: !include /
     }
   get:
     is:
